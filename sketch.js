@@ -3,7 +3,7 @@ var by;
 var boxSize = 75;
 var overBox = false;
 var clicking = false;
-var money = 0.0;
+var money = Number(0);
 var clickWorth = 1;
 var shop;
 
@@ -56,7 +56,10 @@ function isOverBox(){
 }
 
 function addMoney(amountToAdd){
-    money += amountToAdd;
+    console.log("money", money);
+    console.log("amt to add", amountToAdd);
+    money = +money + +amountToAdd;
+    money = Number(money.toFixed(2));
 }
 
 function mousePressed() {
